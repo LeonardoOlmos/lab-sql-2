@@ -42,7 +42,7 @@ FROM sakila.film f
 WHERE f.`length`/60 > 3;
 
 -- 10. Get the name and email formatted. Example: Mary SMITH - mary.smith@sakilacustomer.org.
-SELECT CONCAT(UPPER(SUBSTRING(c.first_name, 1, 1)),  ' ', UPPER(c.last_name), ' - ', LOWER(c.email)) AS user_contact
+SELECT CONCAT(UPPER(SUBSTRING(c.first_name, 1, 1)),LOWER(SUBSTRING(C.first_name, 2)),  ' ', UPPER(c.last_name), ' - ', LOWER(c.email)) AS user_contact
 FROM sakila.customer c;
 
 -- 11. What's the length of the longest film title?
