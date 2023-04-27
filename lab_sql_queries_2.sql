@@ -46,5 +46,5 @@ SELECT CONCAT(UPPER(SUBSTRING(c.first_name, 1, 1)),LOWER(SUBSTRING(C.first_name,
 FROM sakila.customer c;
 
 -- 11. What's the length of the longest film title?
-SELECT LENGTH(MAX(f.title)) AS film_title_length
+SELECT MAX(LENGTH(f.title)) AS film_title_length
 FROM film f;
